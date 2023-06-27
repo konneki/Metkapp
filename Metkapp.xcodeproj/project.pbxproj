@@ -18,6 +18,8 @@
 		2F0DB3022A478EF600199FAD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DB3012A478EF600199FAD /* SearchBarView.swift */; };
 		2F770FB62A4B45AD002C3207 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FB52A4B45AD002C3207 /* Tab.swift */; };
 		2F770FB82A4B48AF002C3207 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FB72A4B48AF002C3207 /* Colors.swift */; };
+		2F770FBE2A4B78C0002C3207 /* Metkapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */; };
+		2F770FC02A4B7B3B002C3207 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBF2A4B7B3B002C3207 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		2F0DB3012A478EF600199FAD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		2F770FB52A4B45AD002C3207 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		2F770FB72A4B48AF002C3207 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2F770FBD2A4B78C0002C3207 /* Metkapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metkapp.xcdatamodel; sourceTree = "<group>"; };
+		2F770FBF2A4B7B3B002C3207 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 		2F0DB2E62A46DE0C00199FAD /* Metkapp */ = {
 			isa = PBXGroup;
 			children = (
+				2F770FBF2A4B7B3B002C3207 /* DataController.swift */,
+				2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */,
 				2F0DB2E72A46DE0C00199FAD /* MetkappApp.swift */,
 				2F0DB2F82A47166400199FAD /* Views */,
 				2F0DB2F72A47164F00199FAD /* Components */,
@@ -176,8 +182,10 @@
 			files = (
 				2F0DB3002A478C0D00199FAD /* InformationView.swift in Sources */,
 				2F770FB82A4B48AF002C3207 /* Colors.swift in Sources */,
+				2F770FBE2A4B78C0002C3207 /* Metkapp.xcdatamodeld in Sources */,
 				2F0DB2EA2A46DE0C00199FAD /* ContentView.swift in Sources */,
 				2F0DB2FE2A478BED00199FAD /* AddClothesView.swift in Sources */,
+				2F770FC02A4B7B3B002C3207 /* DataController.swift in Sources */,
 				2F770FB62A4B45AD002C3207 /* Tab.swift in Sources */,
 				2F0DB2FA2A471AE900199FAD /* HomeView.swift in Sources */,
 				2F0DB3022A478EF600199FAD /* SearchBarView.swift in Sources */,
@@ -383,6 +391,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F770FBD2A4B78C0002C3207 /* Metkapp.xcdatamodel */,
+			);
+			currentVersion = 2F770FBD2A4B78C0002C3207 /* Metkapp.xcdatamodel */;
+			name = Metkapp.xcdatamodeld;
+			path = Views/Metkapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2F0DB2DC2A46DE0C00199FAD /* Project object */;
 }

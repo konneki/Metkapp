@@ -15,7 +15,7 @@ enum Tab: Int {
     var title: String {
         switch self {
             case .home:
-            return "Hello"
+            return "Home"
             case .wardrobe:
             return "Your wardrobe"
             case .add:
