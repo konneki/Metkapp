@@ -7,6 +7,11 @@
 
 import SwiftUI
 
-enum Symbols {
-    case temperature, iron, dry, wash, solvent, other
+enum Symbols: String, CaseIterable {
+    case temperature = "Temperatura"
+    case iron = "Prasowanie"
+    case dry = "Suszenie"
+    case wash = "Pranie"
+    case solvent = "Chemia"
+    case other = "Inne"
 }

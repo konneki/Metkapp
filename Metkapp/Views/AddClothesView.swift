@@ -53,7 +53,7 @@ struct AddClothesView: View {
                 }
             }
             
-            VStack(alignment: .leading) {
+            List {
                 Section("Nazwa") {
                     TextField("Koszulka Beatles", text: $clothesName)
                         .padding(.horizontal)
@@ -61,20 +61,30 @@ struct AddClothesView: View {
                         .background(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .shadow(color: Color.lightShadow, radius: 20)
+                        .listRowSeparator(.hidden)
                 }
                 
                 Section("Symbole") {
-//                    Text("Temperatura")
-//                    Text("Prasowanie")
-//                    Text("Pranie")
-//                    Text("Suszenie")
-//                    Text("Chemia")
-//                    Text("Inne")
+                        ForEach(Symbols.allCases, id: \.rawValue) { symbol in
+                            NavigationLink(symbol.rawValue, value: symbol)
+                        }
+                    
+                }
+                
+                Section("Materiał") {
+                    TextField("coś", text: $clothesName)
+                        .padding(.horizontal)
+                        .padding(.vertical, 10)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(color: Color.lightShadow, radius: 20)
+                        .listRowSeparator(.hidden)
                 }
             }
-            
+            .listStyle(.plain)
+            .headerProminence(.increased)
+            .background(.white)
         }
-        .padding()
     }
 }
 
