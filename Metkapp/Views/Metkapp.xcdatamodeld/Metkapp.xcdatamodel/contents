@@ -5,18 +5,18 @@
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="color" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Colors" inverseName="clothes" inverseEntity="Colors"/>
-        <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Materials" inverseName="clothes" inverseEntity="Materials"/>
-        <relationship name="symbols" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symbols" inverseName="clothes" inverseEntity="Symbols"/>
+        <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="clothes" inverseEntity="Material"/>
+        <relationship name="symbols" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symbol" inverseName="clothes" inverseEntity="Symbol"/>
     </entity>
     <entity name="Colors" representedClassName="Colors" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clothes" inverseName="color" inverseEntity="Clothes"/>
     </entity>
-    <entity name="Materials" representedClassName="Materials" syncable="YES" codeGenerationType="class">
+    <entity name="Material" representedClassName="Material" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clothes" inverseName="material" inverseEntity="Clothes"/>
     </entity>
-    <entity name="Symbols" representedClassName="Symbols" syncable="YES" codeGenerationType="class">
+    <entity name="Symbol" representedClassName="Symbol" syncable="YES" codeGenerationType="class">
         <attribute name="dry" optional="YES" attributeType="String"/>
         <attribute name="iron" optional="YES" attributeType="String"/>
         <attribute name="other" optional="YES" attributeType="String"/>
@@ -24,5 +24,8 @@
         <attribute name="temperature" optional="YES" attributeType="String"/>
         <attribute name="wash" optional="YES" attributeType="String"/>
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Clothes" inverseName="symbols" inverseEntity="Clothes"/>
+    </entity>
+    <entity name="Type" representedClassName="Type" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
 </model>

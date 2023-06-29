@@ -8,10 +8,11 @@
 import SwiftUI
 
 extension Color {
-    static var accent = Color(red: 245/255, green: 163/255, blue: 163/255)
-    static var accentLight = Color(red: 248/255, green: 183/255, blue: 183/255)
-    static var accentShadow = Color(red: 245/255, green: 163/255, blue: 163/255, opacity: 0.5)
-    static var shadow = Color(red: 44/255, green: 29/255, blue: 29/255, opacity: 0.1)
+    static var accent = Color("AccentColor")
+    static var accentLight = Color("AccentLight")
+    static var accentShadow = Color("AccentShadow")
+    static var lightShadow = Color("LightShadow")
+    static var lightGray = Color("LightGray")
 }
 
 extension LinearGradient {

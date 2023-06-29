@@ -18,7 +18,7 @@ struct SearchBarView: View {
                 .padding(.vertical, 10)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(color: .shadow, radius: 20)
+                .shadow(color: Color.lightShadow, radius: 20)
             
             Button { } label: {
                 Image(systemName: "arrow.up.arrow.down")

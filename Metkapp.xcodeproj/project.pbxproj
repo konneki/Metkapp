@@ -20,6 +20,7 @@
 		2F770FB82A4B48AF002C3207 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FB72A4B48AF002C3207 /* Colors.swift */; };
 		2F770FBE2A4B78C0002C3207 /* Metkapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */; };
 		2F770FC02A4B7B3B002C3207 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBF2A4B7B3B002C3207 /* DataController.swift */; };
+		2FBF131D2A4D8E7B0062FB8C /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF131C2A4D8E7B0062FB8C /* Symbols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		2F770FB72A4B48AF002C3207 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2F770FBD2A4B78C0002C3207 /* Metkapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metkapp.xcdatamodel; sourceTree = "<group>"; };
 		2F770FBF2A4B7B3B002C3207 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2FBF131C2A4D8E7B0062FB8C /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				2F770FB72A4B48AF002C3207 /* Colors.swift */,
 				2F0DB3012A478EF600199FAD /* SearchBarView.swift */,
 				2F770FB52A4B45AD002C3207 /* Tab.swift */,
+				2FBF131C2A4D8E7B0062FB8C /* Symbols.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				2F770FBE2A4B78C0002C3207 /* Metkapp.xcdatamodeld in Sources */,
 				2F0DB2EA2A46DE0C00199FAD /* ContentView.swift in Sources */,
 				2F0DB2FE2A478BED00199FAD /* AddClothesView.swift in Sources */,
+				2FBF131D2A4D8E7B0062FB8C /* Symbols.swift in Sources */,
 				2F770FC02A4B7B3B002C3207 /* DataController.swift in Sources */,
 				2F770FB62A4B45AD002C3207 /* Tab.swift in Sources */,
 				2F0DB2FA2A471AE900199FAD /* HomeView.swift in Sources */,
