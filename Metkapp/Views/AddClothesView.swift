@@ -14,6 +14,8 @@ struct AddClothesView: View {
     
     @State private var clothesName = ""
     
+    let user = Bundle.main.decode(SymbolType.self, from: "symbols.json")
+    
     var body: some View {
         VStack {
             if let data = data, let uiimage = UIImage(data: data) {
@@ -51,6 +53,10 @@ struct AddClothesView: View {
                         }
                     }
                 }
+            }
+            
+            Button("test") {
+                print(user.temperature)
             }
             
             List {

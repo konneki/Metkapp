@@ -16,6 +16,7 @@
 		2F0DB2FE2A478BED00199FAD /* AddClothesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DB2FD2A478BED00199FAD /* AddClothesView.swift */; };
 		2F0DB3002A478C0D00199FAD /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DB2FF2A478C0D00199FAD /* InformationView.swift */; };
 		2F0DB3022A478EF600199FAD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DB3012A478EF600199FAD /* SearchBarView.swift */; };
+		2F573ADF2A50B2D500203BD3 /* symbols.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F573ADE2A50B2D500203BD3 /* symbols.json */; };
 		2F770FB62A4B45AD002C3207 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FB52A4B45AD002C3207 /* Tab.swift */; };
 		2F770FB82A4B48AF002C3207 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FB72A4B48AF002C3207 /* Colors.swift */; };
 		2F770FBE2A4B78C0002C3207 /* Metkapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 		2F0DB2FD2A478BED00199FAD /* AddClothesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClothesView.swift; sourceTree = "<group>"; };
 		2F0DB2FF2A478C0D00199FAD /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		2F0DB3012A478EF600199FAD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		2F573ADE2A50B2D500203BD3 /* symbols.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = symbols.json; sourceTree = "<group>"; };
 		2F770FB52A4B45AD002C3207 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		2F770FB72A4B48AF002C3207 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2F770FBD2A4B78C0002C3207 /* Metkapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metkapp.xcdatamodel; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				2F770FBF2A4B7B3B002C3207 /* DataController.swift */,
 				2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */,
 				2F0DB2E72A46DE0C00199FAD /* MetkappApp.swift */,
+				2F573ADE2A50B2D500203BD3 /* symbols.json */,
 				2F0DB2F82A47166400199FAD /* Views */,
 				2F0DB2F72A47164F00199FAD /* Components */,
 				2F0DB2EB2A46DE0D00199FAD /* Assets.xcassets */,
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0DB2EF2A46DE0D00199FAD /* Preview Assets.xcassets in Resources */,
+				2F573ADF2A50B2D500203BD3 /* symbols.json in Resources */,
 				2F0DB2EC2A46DE0D00199FAD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,194 @@
+{
+  "temperature": [
+    {
+      "id": 1,
+      "description": "Pierz maksymalnie w 30°C",
+      "icons": ["30-80", "water-temperature-30"]
+    },
+    {
+      "id": 2,
+      "description": "Pierz maksymalnie w 40°C",
+      "icons": ["40-105", "water-temperature-40"]
+    },
+    {
+      "id": 3,
+      "description": "Pierz maksymalnie w 50°C",
+      "icons": ["50-120", "water-temperature-50"]
+    },
+    {
+      "id": 4,
+      "description": "Pierz maksymalnie w 60°C",
+      "icons": ["60-140", "water-temperature-60"]
+    },
+    {
+      "id": 5,
+      "description": "Pierz maksymalnie w 70°C",
+      "icons": ["70-160", "water-temperature-70"]
+    },
+    {
+      "id": 6,
+      "description": "Pierz maksymalnie w 95°C",
+      "icons": ["95-200", "water-temperature-95"]
+    }
+  ],
+  "dry": [
+    {
+      "id": 1,
+      "description": "Syszyć w suszarce",
+      "icons": ["tumble-dry"]
+    },
+    {
+      "id": 2,
+      "description": "Syszyć w suszarce w niskiej temperaturze",
+      "icons": ["dry-normal-low-heat"]
+    },
+    {
+      "id": 3,
+      "description": "Suszyć w suszarce w normalnej temperaturze",
+      "icons": ["dry-normal-heat"]
+    },
+    {
+      "id": 4,
+      "description": "Suszyć w suszarce w wysokiej temperaturze",
+      "icons": ["dry-normal-high-heat"]
+    },
+    {
+      "id": 5,
+      "description": "Suszyć w suszarce bez gorącego powietrza",
+      "icons": ["dry-normal-no-heat"]
+    },
+    {
+      "id": 6,
+      "description": "Syszyć",
+      "icons": ["dry"]
+    },
+    {
+      "id": 7,
+      "description": "Syszyć w pionie",
+      "icons": ["drip-dry"]
+    },
+    {
+      "id": 8,
+      "description": "Suszyć na płasko",
+      "icons": ["dry-flat"]
+    },
+    {
+      "id": 9,
+      "description": "Powiesić do wyschnięcia",
+      "icons": ["hang-to-dry"]
+    },
+    {
+      "id": 10,
+      "description": "Suszyć w cieniu",
+      "icons": ["dry-in-the-shade"]
+    },
+    {
+      "id": 11,
+      "description": "Nie suszyć",
+      "icons": ["do-not-dry"]
+    }
+  ],
+  "iron": [
+    {
+      "id": 1,
+      "description": "Prasuj w każdej temperaturze",
+      "icons": ["iron-any-temp"]
+    },
+    {
+      "id": 2,
+      "description": "Maksymalna temperatura prasowania 110ºC",
+      "icons": ["maximum-temp-110-230"]
+    },
+    {
+      "id": 3,
+      "description": "Maksymalna temperatura prasowania 150ºC",
+      "icons": ["maximum-temp-150-300"]
+    },
+    {
+      "id": 4,
+      "description": "Maksymalna temperatura prasowania 200ºC",
+      "icons": ["maximum-temp-200-390"]
+    },
+    {
+      "id": 5,
+      "description": "Nie prasuj",
+      "icons": ["do-not-iron"]
+    }
+  ],
+  "wash": [
+    {
+      "id": 1,
+      "description": "Można prać w pralce",
+      "icons": ["machine-wash"]
+    },
+    {
+      "id": 2,
+      "description": "Pranie ręczne",
+      "icons": ["hand-wash"]
+    },
+    {
+      "id": 3,
+      "description": "Można prać w pralce - program delikatny",
+      "icons": ["machine-wash-permanent-press"]
+    },
+    {
+      "id": 4,
+      "description": "Można prać w pralce - program bardzo delikatny",
+      "icons": ["machine-wash-gentle-or-delicate"]
+    },
+    {
+      "id": 5,
+      "description": "Nie można prać",
+      "icons": ["do-not-wash"]
+    }
+  ],
+  "solvent": [
+    {
+      "id": 1,
+      "description": "Można prać chemicznie",
+      "icons": ["solvent"]
+    },
+    {
+      "id": 2,
+      "description": "Można używać wszystkich rozpuszczalników",
+      "icons": ["any-solvent"]
+    },
+    {
+      "id": 3,
+      "description": "Czyścić na sucho - dozwolony tetrachloreten",
+      "icons": ["any-solvent-without-tetrachlorethylene"]
+    },
+    {
+      "id": 4,
+      "description": "Czyścić tylko w benzynie",
+      "icons": ["petroleum-solvent-steam"]
+    },
+    {
+      "id": 5,
+      "description": "Czyścić na mokro",
+      "icons": ["clothes-water"]
+    },
+    {
+      "id": 6,
+      "description": "Nie czyścić chemicznie",
+      "icons": ["do-not-solvent"]
+    }
+  ],
+  "bleach": [
+    {
+      "id": 1,
+      "description": "Można wybielać",
+      "icons": ["triangle"]
+    },
+    {
+      "id": 2,
+      "description": "Można wybielać bez chloru",
+      "icons": ["non-chlorine-bleach-if-needed"]
+    },
+    {
+      "id": 3,
+      "description": "Nie można wybielać",
+      "icons": ["do-not-bleach"]
+    }
+  ]
+}
