@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "any-solvent-without-tetrachlorethylene.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "any-solvent-without-tetrachlorethylene@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "any-solvent-without-tetrachlorethylene@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

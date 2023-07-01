@@ -84,6 +84,9 @@ struct AddClothesView: View {
             .listStyle(.plain)
             .headerProminence(.increased)
             .background(.white)
+            .navigationDestination(for: Symbols.self) { symbol in
+                SymbolView(symbol: symbol)
+            }
         }
     }
 }

@@ -20,6 +20,7 @@
 		2F770FB82A4B48AF002C3207 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FB72A4B48AF002C3207 /* Colors.swift */; };
 		2F770FBE2A4B78C0002C3207 /* Metkapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */; };
 		2F770FC02A4B7B3B002C3207 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F770FBF2A4B7B3B002C3207 /* DataController.swift */; };
+		2F8A43E32A5028550012EFE7 /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A43E22A5028550012EFE7 /* SymbolView.swift */; };
 		2FBF131D2A4D8E7B0062FB8C /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF131C2A4D8E7B0062FB8C /* Symbols.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		2F770FB72A4B48AF002C3207 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2F770FBD2A4B78C0002C3207 /* Metkapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metkapp.xcdatamodel; sourceTree = "<group>"; };
 		2F770FBF2A4B7B3B002C3207 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2F8A43E22A5028550012EFE7 /* SymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
 		2FBF131C2A4D8E7B0062FB8C /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0DB2E92A46DE0C00199FAD /* ContentView.swift */,
+				2F8A43E22A5028550012EFE7 /* SymbolView.swift */,
 				2F0DB2F92A471AE900199FAD /* HomeView.swift */,
 				2F0DB2FB2A478BC800199FAD /* WardrobeView.swift */,
 				2F0DB2FD2A478BED00199FAD /* AddClothesView.swift */,
@@ -195,6 +198,7 @@
 				2F0DB3022A478EF600199FAD /* SearchBarView.swift in Sources */,
 				2F0DB2FC2A478BC800199FAD /* WardrobeView.swift in Sources */,
 				2F0DB2E82A46DE0C00199FAD /* MetkappApp.swift in Sources */,
+				2F8A43E32A5028550012EFE7 /* SymbolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

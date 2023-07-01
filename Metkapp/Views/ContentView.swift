@@ -10,44 +10,58 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selection = Tab.home
+    @State var path = NavigationPath()
+    
     
     var body: some View {
-        NavigationStack {
-            TabView(selection: $selection) {
+        TabView(selection: $selection) {
+            NavigationStack {
                 HomeView()
-                    .tabItem {
-                        Image(systemName: "house")
-                    }
-                    .tag(Tab.home)
-                
+            }
+            .tabItem {
+                Image(systemName: "house")
+            }
+            .tag(Tab.home)
+            
+            NavigationStack {
                 WardrobeView()
-                    .tabItem {
-                        Image(systemName: "rectangle.portrait.righthalf.filled")
-                    }
-                    .tag(Tab.wardrobe)
-                
+            }
+            .tabItem {
+                Image(systemName: "rectangle.portrait.righthalf.filled")
+            }
+            .tag(Tab.wardrobe)
+            
+            NavigationStack(path: $path) {
                 AddClothesView()
-                    .tabItem {
-                        Image(systemName: "plus.rectangle.portrait")
+                    .navigationTitle("Dodaj ubranie")
+                    .toolbar {
+                        ToolbarItem {
+                            Button("Add") { }.tint(.accent)
+                        }
                     }
-                    .tag(Tab.add)
-                
-                InformationView()
-                    .tabItem {
-                        Image(systemName: "info.circle")
-                    }
-                    .tag(Tab.information)
+                    .tint(LinearGradient.accentGradient)
             }
-            .tint(LinearGradient.accentGradient)
-            .navigationTitle(selection.title)
-            .toolbar {
-                if selection == Tab.add {
-                    ToolbarItem {
-                        Button("Add") { }.tint(.accent)
-                    }
+                .tabItem {
+                    Image(systemName: "plus.rectangle.portrait")
                 }
+                .tag(Tab.add)
+            
+            NavigationStack {
+                InformationView()
+                    .navigationTitle("Znaczenie symboli")
             }
+                .tabItem {
+                    Image(systemName: "info.circle")
+                }
+                .tag(Tab.information)
         }
+        
+//        .navigationTitle(selection.title)
+//        .toolbar {
+//            if selection == Tab.add {
+//
+//            }
+//        }
     }
 }
 
