@@ -13,16 +13,16 @@ struct SymbolView: View {
     
     var body: some View {
         List {
-            ForEach(symbol.symbols, id:\.self) { icon in
-                HStack {
-                    Text("\(symbol.rawValue)")
-                    Spacer()
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                }
-            }
+//            ForEach(symbol.symbols, id:\.self) { icon in
+//                HStack {
+//                    Text("\(symbol.rawValue)")
+//                    Spacer()
+//                    Image(icon)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 30, height: 30)
+//                }
+//            }
         }
     }
 }

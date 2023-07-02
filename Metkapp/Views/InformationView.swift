@@ -9,90 +9,22 @@ import SwiftUI
 
 struct InformationView: View {
     
-    let symbols = Bundle.main.decode(SymbolType.self, from: "symbols.json")
+    let symbols = Bundle.main.decode([SymbolDetail].self, from: "symbols.json")
     
     var body: some View {
         List {
-            Section("Temperatura") {
-                ForEach(symbols.temperature) { symbol in
-                    HStack {
-                        Text(symbol.description)
-                        Spacer()
-                        ForEach(symbol.icons, id: \.self) { icon in
-                            Image(icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30, height: 30)
-                        }
-                    }
-                }
-            }
-            Section("Prasowanie") {
-                ForEach(symbols.iron) { symbol in
-                    HStack {
-                        Text(symbol.description)
-                        Spacer()
-                        ForEach(symbol.icons, id: \.self) { icon in
-                            Image(icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30, height: 30)
-                        }
-                    }
-                }
-            }
-            Section("Pranie") {
-                ForEach(symbols.wash) { symbol in
-                    HStack {
-                        Text(symbol.description)
-                        Spacer()
-                        ForEach(symbol.icons, id: \.self) { icon in
-                            Image(icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30, height: 30)
-                        }
-                    }
-                }
-            }
-            Section("Suszenie") {
-                ForEach(symbols.dry) { symbol in
-                    HStack {
-                        Text(symbol.description)
-                        Spacer()
-                        ForEach(symbol.icons, id: \.self) { icon in
-                            Image(icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30, height: 30)
-                        }
-                    }
-                }
-            }
-            Section("Chemia") {
-                ForEach(symbols.solvent) { symbol in
-                    HStack {
-                        Text(symbol.description)
-                        Spacer()
-                        ForEach(symbol.icons, id: \.self) { icon in
-                            Image(icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30, height: 30)
-                        }
-                    }
-                }
-            }
-            Section("Wybielanie") {
-                ForEach(symbols.bleach) { symbol in
-                    HStack {
-                        Text(symbol.description)
-                        Spacer()
-                        ForEach(symbol.icons, id: \.self) { icon in
-                            Image(icon)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 30, height: 30)
+            ForEach(Symbols.allCases, id: \.rawValue) { type in
+                Section(type.rawValue) {
+                    ForEach(symbols.filter({ $0.type == type })) { symbol in
+                        HStack {
+                            Text(symbol.description)
+                            Spacer()
+                            ForEach(symbol.icons, id: \.self) { icon in
+                                Image(icon)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30)
+                            }
                         }
                     }
                 }

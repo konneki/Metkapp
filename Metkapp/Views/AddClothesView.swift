@@ -14,7 +14,7 @@ struct AddClothesView: View {
     
     @State private var clothesName = ""
     
-    let user = Bundle.main.decode(SymbolType.self, from: "symbols.json")
+//    let symbolType = Bundle.main.decode(SymbolType.self, from: "symbols.json")
     
     var body: some View {
         VStack {
@@ -55,10 +55,6 @@ struct AddClothesView: View {
                 }
             }
             
-            Button("test") {
-                print(user.temperature)
-            }
-            
             List {
                 Section("Nazwa") {
                     TextField("Koszulka Beatles", text: $clothesName)
@@ -71,9 +67,9 @@ struct AddClothesView: View {
                 }
                 
                 Section("Symbole") {
-                        ForEach(Symbols.allCases, id: \.rawValue) { symbol in
-                            NavigationLink(symbol.rawValue, value: symbol)
-                        }
+//                    ForEach(Symbols.allCases, id: \.rawValue) { symbol in
+//                            NavigationLink(symbol.rawValue, value: symbol)
+//                        }
                     
                 }
                 

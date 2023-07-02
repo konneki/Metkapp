@@ -7,43 +7,48 @@
 
 import SwiftUI
 
-enum Symbols: String, CaseIterable {
+enum Symbols: String, Decodable, CaseIterable {
+    typealias RawValue = String
+    
     case temperature = "Temperatura"
     case iron = "Prasowanie"
     case dry = "Suszenie"
-    case wash = "Pranie"
+    case wash = "Mycie"
     case solvent = "Chemia"
     case bleach = "Wybielanie"
-    var symbols: [String] {
-        switch self {
-        case .temperature:
-            return ["30-80", "40-105", "50-120", "60-140", "70-160", "95-200", "water-temperature-30", "water-temperature-40", "water-temperature-50", "water-temperature-60", "water-temperature-70", "water-temperature-95"]
-        case .iron:
-            return ["iron-any-temp", "maximum-temp-110-230", "maximum-temp-150-300", "maximum-temp-200-390", "do-not-iron"]
-        case .dry:
-            return ["tumble-dry", "dry-normal-low-heat", "dry-normal-heat", "dry-high-heat", "dry-normal-no-heat", "dry", "drip-dry", "dry-flat", "hang-to-dry", "dry-in-the-shade", "do-not-dry"]
-        case .wash:
-            return ["machine-wash", "hand-wash", "machine-wash-permanent-press", "machine-wash-gentle-or-delicate", "do-not-wash"]
-        case .solvent:
-            return ["any-solvent", "petroleum-solvent-steam", "any-solvent-without-tetrachlorethylene", "clothes-water"]
-        case .bleach:
-            return ["triangle", "non-chlorine-bleach-if-needed", "do-not-bleach"]
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let type = try? container.decode(String.self)
+        switch type {
+        case "temperature": self = .temperature
+        case "iron": self = .iron
+        case "dry": self = .dry
+        case "wash": self = .wash
+        case "solvent": self = .solvent
+        case "bleach": self = .bleach
+        default:
+            self = .bleach
+        }
+    }
+    
+    init?(rawValue: String) {
+        switch rawValue {
+        case "Temperatura": self = .temperature
+        case "Prasowanie": self = .iron
+        case "Suszenie": self = .dry
+        case "Mycie": self = .wash
+        case "Chemia": self = .solvent
+        case "Wybielanie": self = .bleach
+        default:
+            return nil
         }
     }
 }
 
-struct SymbolType: Codable {
-    var temperature: [SymbolDetail]
-    var dry: [SymbolDetail]
-    var iron: [SymbolDetail]
-    var wash: [SymbolDetail]
-    var solvent: [SymbolDetail]
-    var bleach: [SymbolDetail]
-}
-
-struct SymbolDetail: Codable, Identifiable {
+struct SymbolDetail: Decodable, Identifiable {
     var id: Int
     var description: String
+    var type: Symbols
     var icons: [String]
 }
 
