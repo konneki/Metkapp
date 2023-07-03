@@ -1,5 +1,5 @@
 //
-//  Materials.swift
+//  ClothesMaterials.swift
 //  Metkapp
 //
 //  Created by Daniel Konnek on 3.07.2023.
@@ -19,3 +19,4 @@ enum ClothesMaterials: String, CaseIterable {
     case polyamide = "poliamid"
     case elastine = "elastyn"
 }
+

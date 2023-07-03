@@ -13,8 +13,8 @@ struct AddClothesView: View {
     @State private var data: Data?
     @State private var selection: SymbolDetail?
     @State private var clothesName = ""
-    @State private var selectedMaterial: ClothesMaterials = .cotton
-    @State private var selectedColor: ClothesColors = .white
+    @State private var selectedMaterial: ClothesMaterials?
+    @State private var selectedColor: ClothesColors?
     
     let symbolDetail = Bundle.main.decode([SymbolDetail].self, from: "symbols.json")
     
@@ -68,27 +68,44 @@ struct AddClothesView: View {
                         .listRowSeparator(.hidden)
                 }
                 
-                Section("Symbole") {
-                    ForEach(Types.allCases, id: \.rawValue) { type in
-                        NavigationLink(type.rawValue, value: symbolDetail.filter({ $0.type == type }))
-                    }
-                    
-                }
-                
                 Section("Materiał") {
                     Picker("Wybierz rodzaj materiału", selection: $selectedMaterial) {
+                        Text("Nie wybrano").tag(nil as ClothesMaterials?)
                         ForEach(ClothesMaterials.allCases, id: \.self) { material in
-                            Text(material.rawValue.capitalized)
+                            Text(material.rawValue.capitalized).tag(material as ClothesMaterials?)
                         }
                     }
                 }
                 
                 Section("Kolor") {
                     Picker("Wybierz kolor przewodni", selection: $selectedColor) {
+                        Text("Nie wybrano").tag(nil as ClothesColors?)
                         ForEach(ClothesColors.allCases, id: \.self) { color in
-                            Text(color.rawValue.capitalized)
+                            Text(color.rawValue.capitalized).tag(color as ClothesColors?)
                         }
                     }
+                }
+                
+                Section("Symbole") {
+                    ForEach(Types.allCases, id: \.rawValue) { type in
+                        NavigationLink(value: symbolDetail.filter({ $0.type == type })) {
+                            HStack {
+                                Text(type.rawValue.capitalized)
+                                if let selection = selection {
+                                    if type == selection.type {
+                                        Spacer()
+                                        ForEach(selection.icons, id: \.self) { icon in
+                                            Image(icon)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 30, height: 30)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
                 }
             }
             .listStyle(.plain)

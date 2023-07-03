@@ -13,7 +13,7 @@ struct SymbolView: View {
     @Binding var selection: SymbolDetail?
     
     var body: some View {
-        List(symbols, id: \.id, selection: $selection) { symbol in
+        List(symbols) { symbol in
             HStack {
                 Text(symbol.description)
                 Spacer()
@@ -26,9 +26,10 @@ struct SymbolView: View {
                 }
             }
             .onTapGesture {
+                selection = symbol
                 print(symbol)
             }
-            .navigationTitle(symbol.type.rawValue)
+            .navigationTitle(symbol.type.rawValue.capitalized)
         }
     }
 }

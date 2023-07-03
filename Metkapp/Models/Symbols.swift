@@ -10,12 +10,12 @@ import SwiftUI
 enum Types: String, Decodable, CaseIterable {
     typealias RawValue = String
     
-    case temperature = "Temperatura"
-    case iron = "Prasowanie"
-    case dry = "Suszenie"
-    case wash = "Mycie"
-    case solvent = "Chemia"
-    case bleach = "Wybielanie"
+    case temperature = "temperatura"
+    case iron = "prasowanie"
+    case dry = "suszenie"
+    case wash = "mycie"
+    case solvent = "chemia"
+    case bleach = "wybielanie"
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let type = try? container.decode(String.self)
@@ -33,12 +33,12 @@ enum Types: String, Decodable, CaseIterable {
     
     init?(rawValue: String) {
         switch rawValue {
-        case "Temperatura": self = .temperature
-        case "Prasowanie": self = .iron
-        case "Suszenie": self = .dry
-        case "Mycie": self = .wash
-        case "Chemia": self = .solvent
-        case "Wybielanie": self = .bleach
+        case "temperatura": self = .temperature
+        case "prasowanie": self = .iron
+        case "suszenie": self = .dry
+        case "mycie": self = .wash
+        case "chemia": self = .solvent
+        case "wybielanie": self = .bleach
         default:
             return nil
         }
