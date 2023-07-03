@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Symbols: String, Decodable, CaseIterable {
+enum Types: String, Decodable, CaseIterable {
     typealias RawValue = String
     
     case temperature = "Temperatura"
@@ -45,10 +45,10 @@ enum Symbols: String, Decodable, CaseIterable {
     }
 }
 
-struct SymbolDetail: Decodable, Identifiable {
+struct SymbolDetail: Decodable, Identifiable, Hashable {
     var id: Int
     var description: String
-    var type: Symbols
+    var type: Types
     var icons: [String]
 }
 

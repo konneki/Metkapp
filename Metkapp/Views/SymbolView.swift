@@ -9,26 +9,33 @@ import SwiftUI
 
 struct SymbolView: View {
     
-    let symbol: Symbols
+    let symbols: [SymbolDetail]
+    @Binding var selection: SymbolDetail?
     
     var body: some View {
-        List {
-//            ForEach(symbol.symbols, id:\.self) { icon in
-//                HStack {
-//                    Text("\(symbol.rawValue)")
-//                    Spacer()
-//                    Image(icon)
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 30, height: 30)
-//                }
-//            }
+        List(symbols, id: \.id, selection: $selection) { symbol in
+            HStack {
+                Text(symbol.description)
+                Spacer()
+                ForEach(symbol.icons, id: \.self) { icon in
+                    Image(icon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        
+                }
+            }
+            .onTapGesture {
+                print(symbol)
+            }
+            .navigationTitle(symbol.type.rawValue)
         }
     }
 }
 
 struct SymbolView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        SymbolView(symbol: Symbols.solvent)
+        SymbolView(symbols: [SymbolDetail(id: 1, description: "test", type: .bleach, icons: ["do-not-bleach"]),SymbolDetail(id: 2, description: "test", type: .bleach, icons: ["do-not-bleach"])], selection: .constant(SymbolDetail(id: 1, description: "test", type: .bleach, icons: ["do-not-bleach"])))
     }
 }

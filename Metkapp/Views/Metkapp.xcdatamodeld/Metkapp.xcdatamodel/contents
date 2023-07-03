@@ -17,9 +17,9 @@
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clothes" inverseName="material" inverseEntity="Clothes"/>
     </entity>
     <entity name="Symbol" representedClassName="Symbol" syncable="YES" codeGenerationType="class">
+        <attribute name="bleach" optional="YES" attributeType="String"/>
         <attribute name="dry" optional="YES" attributeType="String"/>
         <attribute name="iron" optional="YES" attributeType="String"/>
-        <attribute name="other" optional="YES" attributeType="String"/>
         <attribute name="solvent" optional="YES" attributeType="String"/>
         <attribute name="temperature" optional="YES" attributeType="String"/>
         <attribute name="wash" optional="YES" attributeType="String"/>

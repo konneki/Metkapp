@@ -11,10 +11,11 @@ import SwiftUI
 struct AddClothesView: View {
     @State private var selectedPhoto: [PhotosPickerItem] = []
     @State private var data: Data?
-    
+    @State private var selection: SymbolDetail?
     @State private var clothesName = ""
+    @State private var selectedMaterial: Materials = .cotton
     
-//    let symbolType = Bundle.main.decode(SymbolType.self, from: "symbols.json")
+    let symbolDetail = Bundle.main.decode([SymbolDetail].self, from: "symbols.json")
     
     var body: some View {
         VStack {
@@ -67,27 +68,33 @@ struct AddClothesView: View {
                 }
                 
                 Section("Symbole") {
-//                    ForEach(Symbols.allCases, id: \.rawValue) { symbol in
-//                            NavigationLink(symbol.rawValue, value: symbol)
-//                        }
+                    ForEach(Types.allCases, id: \.rawValue) { type in
+                        NavigationLink(type.rawValue, value: symbolDetail.filter({ $0.type == type }))
+                    }
                     
                 }
                 
                 Section("Materiał") {
-                    TextField("coś", text: $clothesName)
-                        .padding(.horizontal)
-                        .padding(.vertical, 10)
-                        .background(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .shadow(color: Color.lightShadow, radius: 20)
-                        .listRowSeparator(.hidden)
+                    Picker("Wybierz rodzaj materiału", selection: $selectedMaterial) {
+                        ForEach(Materials.allCases, id: \.self) { material in
+                            Text(material.rawValue.capitalized)
+                        }
+                    }
+                }
+                
+                Section("Kolor") {
+                    Picker("Wybierz kolor przewodni", selection: $selectedMaterial) {
+                        ForEach(Materials.allCases, id: \.self) { material in
+                            Text(material.rawValue.capitalized)
+                        }
+                    }
                 }
             }
             .listStyle(.plain)
             .headerProminence(.increased)
             .background(.white)
-            .navigationDestination(for: Symbols.self) { symbol in
-                SymbolView(symbol: symbol)
+            .navigationDestination(for: [SymbolDetail].self) { symbols in
+                SymbolView(symbols: symbols, selection: $selection)
             }
         }
     }
