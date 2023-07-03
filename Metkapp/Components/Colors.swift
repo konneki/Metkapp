@@ -26,3 +26,9 @@ extension View {
     }
 }
 
+enum ClothesColors: String, CaseIterable {
+    case white = "Białe"
+    case color = "Kolorowe"
+    case black = "Czarne"
+}
+

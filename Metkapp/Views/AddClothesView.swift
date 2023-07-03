@@ -13,7 +13,8 @@ struct AddClothesView: View {
     @State private var data: Data?
     @State private var selection: SymbolDetail?
     @State private var clothesName = ""
-    @State private var selectedMaterial: Materials = .cotton
+    @State private var selectedMaterial: ClothesMaterials = .cotton
+    @State private var selectedColor: ClothesColors = .white
     
     let symbolDetail = Bundle.main.decode([SymbolDetail].self, from: "symbols.json")
     
@@ -76,16 +77,16 @@ struct AddClothesView: View {
                 
                 Section("Materiał") {
                     Picker("Wybierz rodzaj materiału", selection: $selectedMaterial) {
-                        ForEach(Materials.allCases, id: \.self) { material in
+                        ForEach(ClothesMaterials.allCases, id: \.self) { material in
                             Text(material.rawValue.capitalized)
                         }
                     }
                 }
                 
                 Section("Kolor") {
-                    Picker("Wybierz kolor przewodni", selection: $selectedMaterial) {
-                        ForEach(Materials.allCases, id: \.self) { material in
-                            Text(material.rawValue.capitalized)
+                    Picker("Wybierz kolor przewodni", selection: $selectedColor) {
+                        ForEach(ClothesColors.allCases, id: \.self) { color in
+                            Text(color.rawValue.capitalized)
                         }
                     }
                 }

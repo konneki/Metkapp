@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Materials: String, CaseIterable {
+enum ClothesMaterials: String, CaseIterable {
     case cotton = "bawełna"
     case silk = "jedwab"
     case wool = "wełna"
