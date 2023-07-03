@@ -13,7 +13,7 @@ struct InformationView: View {
     
     var body: some View {
         List {
-            ForEach(Types.allCases, id: \.rawValue) { type in
+            ForEach(SymbolTypes.allCases, id: \.rawValue) { type in
                 Section(type.rawValue) {
                     ForEach(symbols.filter({ $0.type == type })) { symbol in
                         HStack {

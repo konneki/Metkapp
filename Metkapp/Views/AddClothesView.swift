@@ -87,7 +87,7 @@ struct AddClothesView: View {
                 }
                 
                 Section("Symbole") {
-                    ForEach(Types.allCases, id: \.rawValue) { type in
+                    ForEach(SymbolTypes.allCases, id: \.rawValue) { type in
                         NavigationLink(value: symbolDetail.filter({ $0.type == type })) {
                             HStack {
                                 Text(type.rawValue.capitalized)
