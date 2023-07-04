@@ -1,0 +1,207 @@
+[
+  {
+    "id": 1,
+    "name": "shirt",
+    "type": "upperClothing"
+  },
+  {
+    "id": 2,
+    "name": "furr",
+    "type": "upperClothing"
+  },
+  {
+    "id": 3,
+    "name": "blouse",
+    "type": "upperClothing"
+  },
+  {
+    "id": 4,
+    "name": "golf",
+    "type": "upperClothing"
+  },
+  {
+    "id": 5,
+    "name": "vest",
+    "type": "upperClothing"
+  },
+  {
+    "id": 6,
+    "name": "cardigan",
+    "type": "upperClothing"
+  },
+  {
+    "id": 7,
+    "name": "jacket",
+    "type": "upperClothing"
+  },
+  {
+    "id": 8,
+    "name": "marine",
+    "type": "upperClothing"
+  },
+  {
+    "id": 9,
+    "name": "ramones",
+    "type": "upperClothing"
+  },
+  {
+    "id": 10,
+    "name": "sweater",
+    "type": "upperClothing"
+  },
+  {
+    "id": 11,
+    "name": "tank top",
+    "type": "upperClothing"
+  },
+  {
+    "id": 12,
+    "name": "t-shirt",
+    "type": "upperClothing"
+  },
+  {
+    "id": 13,
+    "name": "tail-coat",
+    "type": "upperClothing"
+  },
+  {
+    "id": 14,
+    "name": "sheep-skin coat",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 15,
+    "name": "jeans",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 16,
+    "name": "leggins",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 17,
+    "name": "mini-skirt",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 18,
+    "name": "skirt",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 19,
+    "name": "trousers",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 20,
+    "name": "suit",
+    "type": "wholeBody"
+  },
+  {
+    "id": 21,
+    "name": "dress",
+    "type": "wholeBody"
+  },
+  {
+    "id": 22,
+    "name": "bra",
+    "type": "underwear"
+  },
+  {
+    "id": 23,
+    "name": "bodysuit",
+    "type": "underwear"
+  },
+  {
+    "id": 24,
+    "name": "boxers",
+    "type": "underwear"
+  },
+  {
+    "id": 25,
+    "name": "panties",
+    "type": "underwear"
+  },
+  {
+    "id": 26,
+    "name": "corset",
+    "type": "underwear"
+  },
+  {
+    "id": 27,
+    "name": "night dress",
+    "type": "underwear"
+  },
+  {
+    "id": 28,
+    "name": "pajamas",
+    "type": "underwear"
+  },
+  {
+    "id": 29,
+    "name": "undershirt",
+    "type": "underwear"
+  },
+  {
+    "id": 30,
+    "name": "briefs",
+    "type": "underwear"
+  },
+  {
+    "id": 31,
+    "name": "thong",
+    "type": "underwear"
+  },
+  {
+    "id": 32,
+    "name": "bathrobe",
+    "type": "underwear"
+  },
+  {
+    "id": 33,
+    "name": "sweatpants",
+    "type": "bottomClothing"
+  },
+  {
+    "id": 34,
+    "name": "long sleeve",
+    "type": "upperClothing"
+  },
+  {
+    "id": 35,
+    "name": "sportswear",
+    "type": "sportswear"
+  },
+  {
+    "id": 36,
+    "name": "blanket",
+    "type": "other"
+  },
+  {
+    "id": 37,
+    "name": "tablecloth",
+    "type": "other"
+  },
+  {
+    "id": 38,
+    "name": "kitchen towel",
+    "type": "other"
+  },
+  {
+    "id": 39,
+    "name": "quilt",
+    "type": "other"
+  },
+  {
+    "id": 40,
+    "name": "coverlet",
+    "type": "other"
+  },
+  {
+    "id": 41,
+    "name": "shoes",
+    "type": "other"
+  }
+]

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F08D0CA2A545FA90007B08E /* types.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F08D0C92A545FA90007B08E /* types.json */; };
+		2F08D0CC2A5463820007B08E /* ClothingTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F08D0CB2A5463820007B08E /* ClothingTypeView.swift */; };
 		2F0DB2E82A46DE0C00199FAD /* MetkappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DB2E72A46DE0C00199FAD /* MetkappApp.swift */; };
 		2F0DB2EA2A46DE0C00199FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DB2E92A46DE0C00199FAD /* ContentView.swift */; };
 		2F0DB2EC2A46DE0D00199FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DB2EB2A46DE0D00199FAD /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F08D0C92A545FA90007B08E /* types.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = types.json; sourceTree = "<group>"; };
+		2F08D0CB2A5463820007B08E /* ClothingTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingTypeView.swift; sourceTree = "<group>"; };
 		2F0DB2E42A46DE0C00199FAD /* Metkapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metkapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0DB2E72A46DE0C00199FAD /* MetkappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetkappApp.swift; sourceTree = "<group>"; };
 		2F0DB2E92A46DE0C00199FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				2F770FBC2A4B78C0002C3207 /* Metkapp.xcdatamodeld */,
 				2F0DB2E72A46DE0C00199FAD /* MetkappApp.swift */,
 				2F573ADE2A50B2D500203BD3 /* symbols.json */,
+				2F08D0C92A545FA90007B08E /* types.json */,
 				2FFA33032A52F9A300EE1EC8 /* Models */,
 				2F3AEC8C2A52FBF50006047B /* ViewModels */,
 				2F0DB2F82A47166400199FAD /* Views */,
@@ -126,6 +131,7 @@
 				2F0DB2FB2A478BC800199FAD /* WardrobeView.swift */,
 				2F0DB2FD2A478BED00199FAD /* AddClothesView.swift */,
 				2F0DB2FF2A478C0D00199FAD /* InformationView.swift */,
+				2F08D0CB2A5463820007B08E /* ClothingTypeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				2F0DB2EF2A46DE0D00199FAD /* Preview Assets.xcassets in Resources */,
 				2F573ADF2A50B2D500203BD3 /* symbols.json in Resources */,
 				2F0DB2EC2A46DE0D00199FAD /* Assets.xcassets in Resources */,
+				2F08D0CA2A545FA90007B08E /* types.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +239,7 @@
 				2F32E2BE2A52FAE0007A5630 /* BundleExtension.swift in Sources */,
 				2F770FB62A4B45AD002C3207 /* Tab.swift in Sources */,
 				2F32E2BC2A52FA80007A5630 /* ClothesColors.swift in Sources */,
+				2F08D0CC2A5463820007B08E /* ClothingTypeView.swift in Sources */,
 				2F0DB2FA2A471AE900199FAD /* HomeView.swift in Sources */,
 				2F0DB3022A478EF600199FAD /* SearchBarView.swift in Sources */,
 				2F0DB2FC2A478BC800199FAD /* WardrobeView.swift in Sources */,

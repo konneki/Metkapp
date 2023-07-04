@@ -12,11 +12,13 @@ struct AddClothesView: View {
     @State private var selectedPhoto: [PhotosPickerItem] = []
     @State private var data: Data?
     @State private var selection: SymbolDetail?
+    @State private var typeSelection: TypeDetail?
     @State private var clothesName = ""
     @State private var selectedMaterial: ClothesMaterials?
     @State private var selectedColor: ClothesColors?
     
     let symbolDetail = Bundle.main.decode([SymbolDetail].self, from: "symbols.json")
+    let typeDetail = Bundle.main.decode([TypeDetail].self, from: "types.json")
     
     var body: some View {
         VStack {
@@ -105,14 +107,33 @@ struct AddClothesView: View {
                             }
                         }
                     }
-                    
                 }
+                
+                Section("Rodzaj ubrań") {
+                    ForEach(Types.allCases, id: \.rawValue) { type in
+                        NavigationLink(value: typeDetail.filter({ $0.type == type })) {
+                            HStack {
+                                Text(type.rawValue.capitalized)
+                                if let typeSelection = typeSelection {
+                                    if type == typeSelection.type {
+                                        Spacer()
+                                        Text(typeSelection.name)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
             }
             .listStyle(.plain)
             .headerProminence(.increased)
             .background(.white)
             .navigationDestination(for: [SymbolDetail].self) { symbols in
                 SymbolView(symbols: symbols, selection: $selection)
+            }
+            .navigationDestination(for: [TypeDetail].self) { types in
+                ClothingTypeView(types: types, selection: $typeSelection)
             }
         }
     }

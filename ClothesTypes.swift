@@ -7,26 +7,45 @@
 
 import SwiftUI
 
-enum Types: String, CaseIterable {
-    case shirt = "koszulka"
-    case jeans = "dżins"
-    case furr = "futro"
-    case suit = "garnitur"
-    case blouse = "bluza/bluzka"
-    case golf = "golf"
-    case vest = "kamizelka"
-    case cardigan = "kardigan"
-    case sheepskinCoat = "kożuch"
-    case jacket = "kurtka"
-    case leggins = "legginsy"
-    case marine = "marynarka"
-    case miniSkirt = "miniówka"
-    case skirt = "spódnica"
-    case ramones = "ramoneska"
-    case socks = "skarpety"
-    case trousers = "spodnie"
-    case dress = "sukienka"
-    case sweater = "sweter"
-    case tankTop = "tank top"
-    case tShirt = "t-shirt"
+enum Types: String, Decodable, CaseIterable {
+    case upperClothing = "odzież wierzchnia"
+    case bottomClothing = "odzież dolna"
+    case underwear = "bielizna"
+    case sportswear = "odzież sportowa"
+    case other = "inne"
+    case wholeBody = "całe ciało"
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let type = try? container.decode(String.self)
+        switch type {
+        case "upperClothing": self = .upperClothing
+        case "bottomClothing": self = .bottomClothing
+        case "underwear": self = .underwear
+        case "sportswear": self = .sportswear
+        case "other": self = .other
+        case "wholeBody": self = .wholeBody
+        default:
+            self = .other
+        }
+    }
+    
+    init?(rawValue: String) {
+        switch rawValue {
+        case "odzież wierzchnia": self = .upperClothing
+        case "odzież dolna": self = .bottomClothing
+        case "bielizna": self = .underwear
+        case "odzież sportowa": self = .sportswear
+        case "inne": self = .other
+        case "całe ciało": self = .wholeBody
+        default:
+            return nil
+        }
+    }
+}
+
+struct TypeDetail: Decodable, Identifiable, Hashable {
+    var id: Int
+    var name: String
+    var type: Types
 }
