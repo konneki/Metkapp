@@ -9,9 +9,9 @@ import PhotosUI
 import SwiftUI
 
 struct AddClothesView: View {
-    @State private var selectedPhoto: [PhotosPickerItem] = []
-    @State private var data: Data?
-    @State private var selection: SymbolDetail?
+    
+    @StateObject var addClothesVM = AddClothesViewModel()
+    @StateObject var symbolsVM = SymbolsViewModel()
     @State private var typeSelection: TypeDetail?
     @State private var clothesName = ""
     @State private var selectedMaterial: ClothesMaterials?
@@ -22,7 +22,7 @@ struct AddClothesView: View {
     
     var body: some View {
         VStack {
-            if let data = data, let uiimage = UIImage(data: data) {
+            if let data = addClothesVM.data, let uiimage = UIImage(data: data) {
                 Image(uiImage: uiimage)
                     .resizable()
                     .scaledToFill()
@@ -30,7 +30,7 @@ struct AddClothesView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .shadow(color: .lightShadow, radius: 10)
             } else {
-                PhotosPicker(selection: $selectedPhoto, maxSelectionCount: 1, matching: .images) {
+                PhotosPicker(selection: $addClothesVM.selectedPhoto, maxSelectionCount: 1, matching: .images) {
                     RoundedRectangle(cornerRadius: 20)
                         .foregroundColor(.white)
                         .frame(width: 200, height: 200)
@@ -41,21 +41,8 @@ struct AddClothesView: View {
                                 .font(.system(size: 80))
                         )
                 }
-                .onChange(of: selectedPhoto) { newValue in
-                    guard let image = selectedPhoto.first else { return }
-                    
-                    image.loadTransferable(type: Data.self) { result in
-                        switch result {
-                        case .success(let data):
-                            if let data = data {
-                                self.data = data
-                            } else {
-                                print("Data failed to load")
-                            }
-                        case .failure(let error):
-                            fatalError("\(error)")
-                        }
-                    }
+                .onChange(of: addClothesVM.selectedPhoto) { newValue in
+                    addClothesVM.loadImage(from: newValue)
                 }
             }
             
@@ -93,15 +80,13 @@ struct AddClothesView: View {
                         NavigationLink(value: symbolDetail.filter({ $0.type == type })) {
                             HStack {
                                 Text(type.rawValue.capitalized)
-                                if let selection = selection {
-                                    if type == selection.type {
+                                if let icons = symbolsVM.showIcons(for: type) {
                                         Spacer()
-                                        ForEach(selection.icons, id: \.self) { icon in
+                                        ForEach(icons, id: \.self) { icon in
                                             Image(icon)
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 30, height: 30)
-                                        }
                                     }
                                 }
                             }
@@ -130,7 +115,8 @@ struct AddClothesView: View {
             .headerProminence(.increased)
             .background(.white)
             .navigationDestination(for: [SymbolDetail].self) { symbols in
-                SymbolView(symbols: symbols, selection: $selection)
+                SymbolView(symbols: symbols)
+                    .environmentObject(symbolsVM)
             }
             .navigationDestination(for: [TypeDetail].self) { types in
                 ClothingTypeView(types: types, selection: $typeSelection)

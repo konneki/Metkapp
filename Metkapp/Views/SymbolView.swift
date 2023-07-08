@@ -10,7 +10,9 @@ import SwiftUI
 struct SymbolView: View {
     
     let symbols: [SymbolDetail]
-    @Binding var selection: SymbolDetail?
+    
+    @EnvironmentObject var symbolsVM: SymbolsViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         List(symbols) { symbol in
@@ -26,8 +28,8 @@ struct SymbolView: View {
                 }
             }
             .onTapGesture {
-                selection = symbol
-//                print(symbol)
+                symbolsVM.addSymbol(symbol)
+                dismiss()
             }
             .navigationTitle(symbol.type.rawValue.capitalized)
         }
@@ -37,6 +39,6 @@ struct SymbolView: View {
 struct SymbolView_Previews: PreviewProvider {
     
     static var previews: some View {
-        SymbolView(symbols: [SymbolDetail(id: 1, description: "test", type: .bleach, icons: ["do-not-bleach"]),SymbolDetail(id: 2, description: "test", type: .bleach, icons: ["do-not-bleach"])], selection: .constant(SymbolDetail(id: 1, description: "test", type: .bleach, icons: ["do-not-bleach"])))
+        SymbolView(symbols: [SymbolDetail(id: 1, description: "test", type: .bleach, icons: ["do-not-bleach"]),SymbolDetail(id: 2, description: "test", type: .bleach, icons: ["do-not-bleach"])])
     }
 }
