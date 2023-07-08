@@ -27,7 +27,7 @@ struct SymbolView: View {
             }
             .onTapGesture {
                 selection = symbol
-                print(symbol)
+//                print(symbol)
             }
             .navigationTitle(symbol.type.rawValue.capitalized)
         }

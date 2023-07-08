@@ -7,25 +7,33 @@
         <relationship name="color" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Colors" inverseName="clothes" inverseEntity="Colors"/>
         <relationship name="material" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Material" inverseName="clothes" inverseEntity="Material"/>
         <relationship name="symbols" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symbol" inverseName="clothes" inverseEntity="Symbol"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Type" inverseName="clothes" inverseEntity="Type"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+                <constraint value="image"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Colors" representedClassName="Colors" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clothes" inverseName="color" inverseEntity="Clothes"/>
     </entity>
     <entity name="Material" representedClassName="Material" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clothes" inverseName="material" inverseEntity="Clothes"/>
     </entity>
     <entity name="Symbol" representedClassName="Symbol" syncable="YES" codeGenerationType="class">
-        <attribute name="bleach" optional="YES" attributeType="String"/>
-        <attribute name="dry" optional="YES" attributeType="String"/>
-        <attribute name="iron" optional="YES" attributeType="String"/>
-        <attribute name="solvent" optional="YES" attributeType="String"/>
-        <attribute name="temperature" optional="YES" attributeType="String"/>
-        <attribute name="wash" optional="YES" attributeType="String"/>
+        <attribute name="bleach" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dry" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="iron" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="solvent" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wash" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Clothes" inverseName="symbols" inverseEntity="Clothes"/>
     </entity>
     <entity name="Type" representedClassName="Type" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="clothes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clothes" inverseName="type" inverseEntity="Clothes"/>
     </entity>
 </model>
